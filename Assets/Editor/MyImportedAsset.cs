@@ -3,6 +3,7 @@ using UnityEngine;
 class MyImportedAsset {
 
 	public Texture2D texture;
+	public Texture2D textureCopy;
 	public string target_path;
 	private string m_sourcePath;
 	public string source_path {
