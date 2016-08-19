@@ -16,8 +16,6 @@ public class MyCustomTexturePostprocessor : AssetPostprocessor {
 			asset.source_path = assetPath;
 
 			importedAssetList.Add( asset );
-//			TextureImporter textureImporter  = (TextureImporter) assetImporter;
-//			textureImporter.isReadable = true;
 		}
 	}
 	
@@ -39,8 +37,6 @@ public class MyCustomTexturePostprocessor : AssetPostprocessor {
 			if( asset != null && !asset.targetAsset_created ){
 				Debug.Log("Reimported Asset :: create low resolution image for '" + asset.source_path + "' at '" + asset.target_path + "'");
 			}
-//				FileUtil.CopyFileOrDirectory( source, target);
-//				createdImages.Add(target);
 		}
 
 		foreach (string str in deletedAssets) {

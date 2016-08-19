@@ -17,7 +17,11 @@ namespace AssetBundles
 			if (Application.platform == RuntimePlatform.WindowsEditor)
 				return Path.Combine(Path.GetDirectoryName(editorAppPath), "Data");
 			else if (Application.platform == RuntimePlatform.OSXEditor)
+#if UNITY_5_4_OR_NEWER
+				return Path.Combine(editorAppPath, "Contents");
+#else
 				return Path.Combine(editorAppPath, Path.Combine("Contents", "Frameworks"));
+#endif
 			else // Linux...?
 				return Path.Combine(Path.GetDirectoryName(editorAppPath), "Data");
 		}
